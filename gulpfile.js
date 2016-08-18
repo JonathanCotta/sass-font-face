@@ -5,7 +5,6 @@ var woff2 = require('gulp-ttf2woff2');
 var eot = require('gulp-ttf2eot');
 var rename = require('gulp-rename');
 
-
 gulp.task("default", ['watcher']);
 
 gulp.task("sass", function(){
@@ -28,12 +27,12 @@ gulp.task("watcher", function(){
 
 function fontConvert(folders) {
   folders.forEach(function(f, index){
-    gulp.src("./assets/font/"+ f +"/*.ttf")
+    gulp.src("./assets/fonts/"+ f +"/*.ttf")
     .pipe(woff2())
-    .pipe(gulp.dest("./assets/font/"+ f +"/"));
+    .pipe(gulp.dest("./assets/fonts/"+ f +"/"));
 
-    gulp.src("./assets/font/"+ f +"/*.ttf")
+    gulp.src("./assets/fonts/"+ f +"/*.ttf")
     .pipe(eot())
-    .pipe(gulp.dest("./assets/font/"+ f +"/"));
+    .pipe(gulp.dest("./assets/fonts/"+ f +"/"));
   });
 }

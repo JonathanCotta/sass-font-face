@@ -1,18 +1,17 @@
-@mixin font-face($family , $name , $folder, $style: normal, $weigth: normal , $path:"./assets/font" ){
+@mixin font-face($name , $folder , $file: "*" , $style: normal, $weigth: normal , $path:"../fonts"){
+  $filepath: "#{$path}/#{$folder}/#{$file}";
   @font-face{
-    font-family: $family;
-
-    src: url("#{$path}/#{$folder}/#{$name}.ttf") format('truetype'),
-    url("#{$path}/#{$folder}/#{$name}.woff2") format('woff2'),
-    url("#{$path}/#{$folder}/#{$name}.eot") format('embedded-opentype');
-
+    font-family: $name;
+    src: url("#{$filepath}.ttf") format('truetype'),
+    url("#{$filepath}.woff2") format('woff2'),
+    url("#{$filepath}.eot") format('embedded-opentype');
     font-style: $style;
     font-weight: $weigth;
   }
 }
 
-@include  font-face('Roboto', "Roboto-Regular","roboto");
-@include  font-face('Caviar', "CaviarDreams","caviar-dreams");
+@include  font-face('Roboto',"roboto", "Roboto-Regular");
+@include  font-face('Caviar', "caviar-dreams","CaviarDreams");
 
 $fontA: "Roboto";
 $fontB: "Caviar";
