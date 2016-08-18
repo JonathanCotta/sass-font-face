@@ -12,9 +12,15 @@
 }
 
 @include  font-face('Roboto', "Roboto-Regular","roboto");
+@include  font-face('Caviar', "CaviarDreams","caviar-dreams");
 
-$font: "Roboto";
+$fontA: "Roboto";
+$fontB: "Caviar";
 
 .roboto{
-  font-family: $fontB;
+  font-family: $fontA;
+}
+
+.caviar{
+  font-family: $fontB
 }
