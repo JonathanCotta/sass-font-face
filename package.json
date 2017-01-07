@@ -1,14 +1,14 @@
 {
   "name": "font-face",
   "version": "1.0.0",
-  "description": "",
+  "description": "sass mixing for font-face",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Jonathan Cotta da Silva",
+  "license": "GNU v3",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-csso": "^2.0.0",
